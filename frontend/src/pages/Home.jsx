@@ -4,17 +4,33 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import AboutUs from '../components/AboutUs';
 import heroBg from '../assets/hero1.jpg';
+import heroMbl from '../assets/aboutus-bg.jpg';
 
 const Home = () => {
   return (
     <div className="relative min-h-screen font-sans text-white">
-      {/* Background Image */}
+      {/* Background Image - Mobile */}
       <div 
-        className="absolute inset-0 z-0"
+        className="absolute inset-0  z-0 md:hidden"
+        style={{
+          
+          backgroundImage: `url(${heroMbl})`,
+          backgroundPosition: ' top ',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/10"></div>
+      </div>
+
+      {/* Background Image - Desktop */}
+      <div 
+        className="absolute inset-0 w-full  z-0 hidden md:block"
         style={{
           backgroundImage: `url(${heroBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundSize: 'contain',
+          backgroundPosition: 'top center',
+          backgroundRepeat: 'no-repeat',
         }}
       >
         {/* Overlay for better text readability */}

@@ -22,7 +22,7 @@ const AboutUs = () => {
             <p className="text-gray-500 text-lg leading-relaxed mb-8 max-w-xl">
               Our progress tracking feature allows you to monitor your mental health journey with ease. Stay motivated as you see your improvements over time and celebrate each milestone.
             </p>
-            <button className="bg-[#134E4A] hover:bg-[#0f3f3c] text-white px-8 py-3.5 rounded-lg font-medium transition-all shadow-lg hover:shadow-xl">
+            <button className="bg-gradient-to-r from-[#134E4A] to-[#0D9488] hover:from-[#0f3f3c] hover:to-[#0a7a6f] text-white px-8 py-3.5 rounded-lg font-medium transition-all shadow-lg hover:shadow-xl">
               Learn more
             </button>
           </div>
