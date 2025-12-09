@@ -85,7 +85,7 @@ const Navbar = () => {
                 Free Trial
               </button>
               
-              <div className="flex flex-col gap-4 mt-2 border-t border-white/20 pt-4">
+              <div className="flex flex-col gap-4 mt-2 border-t border-white/20 pt-4 md:hidden">
                 <a href="#" className="text-white/80 hover:text-white font-medium text-lg">Login</a>
                 <a href="#" className="text-white/80 hover:text-white font-medium text-lg">Signup</a>
               </div>

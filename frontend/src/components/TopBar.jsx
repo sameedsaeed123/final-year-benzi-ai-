@@ -14,7 +14,7 @@ const TopBar = () => {
           <span className="font-medium">Benzi@gmail.com</span>
         </div>
       </div>
-      <div className="hidden lg:flex items-center gap-4 font-medium">
+      <div className="hidden md:flex items-center gap-4 font-medium">
         <a href="#" className="hover:text-gray-600">Login</a>
         <a href="#" className="hover:text-gray-600">Signup</a>
       </div>

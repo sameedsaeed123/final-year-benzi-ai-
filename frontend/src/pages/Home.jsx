@@ -2,6 +2,7 @@ import React from 'react';
 import TopBar from '../components/TopBar';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import AboutUs from '../components/AboutUs';
 import heroBg from '../assets/hero1.jpg';
 
 const Home = () => {
@@ -25,6 +26,11 @@ const Home = () => {
         <TopBar />
         <Navbar />
         <Hero />
+      </div>
+      
+      {/* About Us Section (Outside the hero background wrapper) */}
+      <div className="relative z-20 bg-white">
+        <AboutUs />
       </div>
     </div>
   );
