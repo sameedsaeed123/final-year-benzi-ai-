@@ -5,6 +5,18 @@ import logo from '../assets/logo-transparent.png';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Prevent body scroll when menu is open
+  React.useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const navLinks = [
     { name: 'Home', active: true },
     { name: 'About Us', active: false },

@@ -39,9 +39,9 @@ const Features = () => {
                             alt="vector"
                             className="absolute -top-24 -left-20 w-56 md:w-72 lg:w-80 opacity-100 mix-blend-normal contrast-125 drop-shadow-[0_0_20px_rgba(0,0,0,0.12)] -z-0 pointer-events-none select-none"
                         />
-                        <h2 className="text-[#1F3A4F] text-[2rem] md:text-[2.8rem] lg:text-[3rem] font-bold leading-tight tracking-tight relative">
-                            Guiding You Towards<br />
-                            <span className="italic text-[#3AA6A0]">Mental Health</span> with Care
+                        <h2 className="text-[#1F3A4F] text-[1.75rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold leading-tight tracking-tight relative">
+                            <span className="block">Guiding You Towards</span>
+                            <span className="block"><span className="italic text-[#3AA6A0]">Mental Health</span> with Care</span>
                         </h2>
                     </div>
 
@@ -55,12 +55,12 @@ const Features = () => {
                 {/* ------------------------ Cards Section ------------------------ */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {features.map(({ title, copy, icon }) => (
-                        <div key={title} className="relative overflow-hidden rounded-[1.8rem] shadow-[0_32px_70px_rgba(7,63,56,0.45)]">
+                        <div key={title} className="relative overflow-hidden rounded-[1.8rem] shadow-[0_32px_70px_rgba(7,63,56,0.45)] flex">
                             <div className="absolute inset-0" style={{ background: 'linear-gradient(270deg, #233D43 0%, #008170 100%)' }} aria-hidden="true"></div>
                             <div className="absolute -top-16 -right-12 w-[280px] md:w-[320px] opacity-85 pointer-events-none select-none" aria-hidden="true">
                                 <img src={vector2} alt="Texture overlay" className="w-full h-auto" />
                             </div>
-                            <div className="relative p-9 md:p-10 flex flex-col h-full text-white">
+                            <div className="relative p-9 md:p-10 flex flex-col w-full text-white min-h-[420px]">
                                 <div className="w-16 h-16 md:w-20 md:h-20 mb-7 bg-white rounded-full flex items-center justify-center shadow-[0_18px_32px_rgba(7,63,56,0.35)]">
                                     <img src={icon} alt={title} className="w-12 h-12 object-contain" />
                                 </div>

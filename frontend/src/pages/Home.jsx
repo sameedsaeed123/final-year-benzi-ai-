@@ -6,18 +6,17 @@ import Features from '../components/Features';
 import AboutUs from '../components/AboutUs';
 import Services from '../components/Services';
 import heroBg from '../assets/hero1.jpg';
-import heroMbl from '../assets/hero-mbl.jpg';
+import heroMbl from '../assets/aboutus-bg.jpg';
 
 const Home = () => {
   return (
     <div className="relative min-h-screen font-sans text-white">
       {/* Background Image - Mobile */}
       <div 
-        className="absolute inset-0  z-0 md:hidden"
+        className="absolute top-0 left-0 w-full h-screen z-0 md:hidden"
         style={{
-          
           backgroundImage: `url(${heroMbl})`,
-          backgroundSize: '100% 100%',
+          backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
@@ -28,11 +27,11 @@ const Home = () => {
 
       {/* Background Image - Desktop */}
       <div 
-        className="absolute inset-0 w-full  z-0 hidden md:block"
+        className="absolute top-0 left-0 w-full h-screen z-0 hidden md:block"
         style={{
           backgroundImage: `url(${heroBg})`,
-          backgroundSize: 'contain',
-          backgroundPosition: 'top center',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
       >
@@ -51,6 +50,7 @@ const Home = () => {
       <div className="relative z-20 bg-white">
         <AboutUs />
       </div>
+   
 
       {/* Features Section */}
       <div className="relative z-20 bg-white">

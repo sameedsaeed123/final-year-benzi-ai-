@@ -1,5 +1,6 @@
 import React from 'react';
 import heroBg from '../assets/hero1.jpg';
+import heroMbl from '../assets/aboutus-bg.jpg';
 import icon1 from '../assets/icons (1).png';
 import icon2 from '../assets/icons (2).png';
 import icon3 from '../assets/icons (3).png';
@@ -43,9 +44,21 @@ const services = [
 const Services = () => {
     return (
         <section className="relative py-20 md:py-28 overflow-hidden">
-            {/* Background Image */}
+            {/* Background Image - Mobile */}
             <div 
-                className="absolute inset-0 z-0"
+                className="absolute inset-0 z-0 md:hidden"
+                style={{
+                    backgroundImage: `url(${heroMbl})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+            >
+                <div className="absolute inset-0 bg-black/20"></div>
+            </div>
+
+            {/* Background Image - Desktop */}
+            <div 
+                className="absolute inset-0 z-0 hidden md:block"
                 style={{
                     backgroundImage: `url(${heroBg})`,
                     backgroundSize: 'cover',
@@ -70,7 +83,7 @@ const Services = () => {
                     {services.map(({ title, description, icon }) => (
                         <div key={title} className="flex">
                             {/* Card with gradient background */}
-                            <div className="flex flex-col bg-gradient-to-br from-[#0F766E] to-[#134E4A] rounded-[2rem] overflow-hidden shadow-[0_25px_60px_rgba(15,118,110,0.35)] w-full">
+                            <div className="flex flex-col rounded-[2rem] overflow-hidden shadow-[0_25px_60px_rgba(15,118,110,0.35)] w-full" style={{ background: 'linear-gradient(180deg, #008170 0%, #233D43 100%)' }}>
                                 <div className="p-6 md:p-7 pb-5 flex-1 flex flex-col">
                                     {/* Icon - Already has background */}
                                     <div className="mb-4">

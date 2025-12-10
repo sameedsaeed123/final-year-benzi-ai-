@@ -5,7 +5,7 @@ import customer3 from '../assets/customer (3).jpg';
 
 const Hero = () => {
   return (
-    <main className="flex-grow flex flex-col items-center justify-center text-center px-4 md:px-8 mt-12 md:mt-0 pb-12 md:pb-0">
+    <main className="flex-grow flex flex-col items-center justify-center text-center px-4 md:px-8 py-12 md:py-16 lg:py-20">
       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium max-w-5xl leading-tight drop-shadow-sm">
         <span className="italic font-serif text-[#2D3E4E]">Restoring Balance</span> <span className="text-white font-light">with</span> <br />
         <span className="font-sans font-semibold text-white">Evidence-Based Care</span>
