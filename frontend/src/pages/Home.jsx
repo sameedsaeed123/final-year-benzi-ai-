@@ -2,9 +2,10 @@ import React from 'react';
 import TopBar from '../components/TopBar';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import Features from '../components/Features';
 import AboutUs from '../components/AboutUs';
 import heroBg from '../assets/hero1.jpg';
-import heroMbl from '../assets/aboutus-bg.jpg';
+import heroMbl from '../assets/hero-mbl.jpg';
 
 const Home = () => {
   return (
@@ -15,7 +16,8 @@ const Home = () => {
         style={{
           
           backgroundImage: `url(${heroMbl})`,
-          backgroundPosition: ' top ',
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
       >
@@ -47,6 +49,11 @@ const Home = () => {
       {/* About Us Section (Outside the hero background wrapper) */}
       <div className="relative z-20 bg-white">
         <AboutUs />
+      </div>
+
+      {/* Features Section */}
+      <div className="relative z-20 bg-white">
+        <Features />
       </div>
     </div>
   );
