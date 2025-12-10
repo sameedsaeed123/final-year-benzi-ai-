@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
 import AboutUs from '../components/AboutUs';
+import Services from '../components/Services';
 import heroBg from '../assets/hero1.jpg';
 import heroMbl from '../assets/hero-mbl.jpg';
 
@@ -54,6 +55,11 @@ const Home = () => {
       {/* Features Section */}
       <div className="relative z-20 bg-white">
         <Features />
+      </div>
+
+      {/* Services Section */}
+      <div className="relative z-20">
+        <Services />
       </div>
     </div>
   );
