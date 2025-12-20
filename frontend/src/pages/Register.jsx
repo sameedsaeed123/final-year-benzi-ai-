@@ -39,13 +39,13 @@ const Register = () => {
               {/* Teal Content Area */}
               <div className="bg-[#17615B] flex-1 flex flex-col">
                 {/* Profile Image */}
-                <div className="flex justify-center pt-6 pb-4">
+                <div className="flex justify-center pt-8 pb-4">
                   <div className="w-20 h-20 md:w-[85px] md:h-[85px] rounded-full bg-[#c8ddd7] p-1 flex items-center justify-center">
                     <div className="w-full h-full rounded-full overflow-hidden">
                       <img 
                         src={therapistImg} 
                         alt="Therapist" 
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-top"
                       />
                     </div>
                   </div>
