@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '../assets/logo-transparent.png';
+import logoWhite from '../assets/logowhite.png';
 
 const Navbar = ({ isSticky = false }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -136,37 +137,38 @@ const Navbar = ({ isSticky = false }) => {
         {/* Backdrop */}
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsOpen(false)}></div>
         
-        {/* Sidebar */}
-        <div className={`absolute top-0 right-0 w-[280px] h-full bg-[#2D3E4E]/95 backdrop-blur-xl shadow-2xl transform transition-transform duration-300 ease-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-          <div className="flex flex-col h-full p-6">
-            <div className="flex justify-end mb-8">
+        {/* Full Width Menu */}
+        <div className={`absolute top-0 left-0 right-0 w-full bg-[#2D3E4E] shadow-2xl transform transition-transform duration-300 ease-out ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}>
+          <div className="flex flex-col p-6">
+            <div className="flex justify-between items-center mb-6">
+              <img src={logoWhite} alt="Benzi Logo" className="h-8" />
               <button onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white">
                 <X size={24} />
               </button>
             </div>
             
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
-                  className={`text-lg font-medium transition-colors ${
-                    link.active ? 'text-white font-bold' : 'text-white/70 hover:text-white'
-                  }`}
+                  className={`text-base font-medium transition-colors py-2 border-b border-white/10 ${link.active ? 'text-white font-bold' : 'text-white/70 hover:text-white'}`}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </Link>
               ))}
-              <button className="mt-4 bg-white text-[#2D3E4E] px-5 py-3 rounded-lg font-bold shadow-md hover:bg-gray-100 transition-colors">
-                Free Trial
-              </button>
-              
-              <div className="flex flex-col gap-4 mt-2 border-t border-white/20 pt-4 md:hidden">
-                <Link to="/login" className="text-white/80 hover:text-white font-medium text-lg">Login</Link>
-                <Link to="/signup" className="text-white/80 hover:text-white font-medium text-lg">Signup</Link>
-              </div>
             </div>
+            
+            <div className="flex items-center gap-4 mt-6 pt-4 border-t border-white/20">
+              <Link to="/login" className="text-white/80 hover:text-white font-medium">Login</Link>
+              <span className="text-white/40">|</span>
+              <Link to="/signup" className="text-white/80 hover:text-white font-medium">Signup</Link>
+            </div>
+            
+            <button className="mt-4 bg-white text-[#2D3E4E] px-5 py-3 rounded-lg font-bold shadow-md hover:bg-gray-100 transition-colors w-full">
+              Free Trial
+            </button>
           </div>
         </div>
       </div>
