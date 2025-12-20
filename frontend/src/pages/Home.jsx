@@ -8,6 +8,7 @@ import Services from '../components/Services';
 import Pricing from '../components/Pricing';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
+import ScrollToTop from '../components/ScrollToTop';
 import heroBg from '../assets/hero-main.jpg';
 import heroMbl from '../assets/hero-main.jpg';
 
@@ -52,35 +53,38 @@ const Home = () => {
       </div>
       
       {/* About Us Section (Outside the hero background wrapper) */}
-      <div className="relative z-20 bg-[#F5EFE7]">
+      <div className="relative bg-[#F5EFE7]">
         <AboutUs />
       </div>
    
 
       {/* Features Section */}
-      <div className="relative z-20 bg-[#F5EFE7]">
+      <div className="relative bg-[#F5EFE7]">
         <Features />
       </div>
 
       {/* Services Section */}
-      <div className="relative z-20">
+      <div className="relative">
         <Services />
       </div>
 
       {/* Pricing Section */}
-      <div className="relative z-20">
+      <div className="relative">
         <Pricing />
       </div>
 
       {/* CTA Section */}
-      <div className="relative z-20">
+      <div className="relative">
         <CallToAction />
       </div>
 
       {/* Footer */}
-      <div className="relative z-20">
+      <div className="relative">
         <Footer />
       </div>
+
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
     </div>
   );
 };

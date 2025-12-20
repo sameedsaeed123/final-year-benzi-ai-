@@ -1,11 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FiFacebook, FiLinkedin, FiInstagram, FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
 import { FaXTwitter } from 'react-icons/fa6';
 import logo from '../assets/logowhite.png';
 
 const Footer = () => {
-    const quickLinksLeft = ['Home', 'About Us', 'Virtual Counselor', 'Rescources'];
-    const quickLinksRight = ['Subscriptions', 'Blogs', "FAQ's", 'Contact Us'];
+    const quickLinksLeft = [
+        { name: 'Home', href: '/' },
+        { name: 'About Us', href: '/about' },
+        { name: 'Virtual Counselor', href: '/counselor' },
+        { name: 'Resources', href: '/resources' },
+    ];
+    const quickLinksRight = [
+        { name: 'Subscriptions', href: '/subscriptions' },
+        { name: 'Blogs', href: '/blogs' },
+        { name: "FAQ's", href: '/faqs' },
+        { name: 'Contact Us', href: '/contact' },
+    ];
     const socialIcons = [
         { Icon: FiFacebook, href: '#' },
         { Icon: FiLinkedin, href: '#' },
@@ -46,15 +57,15 @@ const Footer = () => {
                         <div className="flex gap-8 sm:gap-12">
                             <ul className="space-y-2 text-[#FBF6F0]/90 text-sm">
                                 {quickLinksLeft.map((item) => (
-                                    <li key={item}>
-                                        <a href="#" className="hover:text-[#FBF6F0] transition">{item}</a>
+                                    <li key={item.name}>
+                                        <Link to={item.href} className="hover:text-[#FBF6F0] transition">{item.name}</Link>
                                     </li>
                                 ))}
                             </ul>
                             <ul className="space-y-2 text-[#FBF6F0]/90 text-sm">
                                 {quickLinksRight.map((item) => (
-                                    <li key={item}>
-                                        <a href="#" className="hover:text-[#FBF6F0] transition">{item}</a>
+                                    <li key={item.name}>
+                                        <Link to={item.href} className="hover:text-[#FBF6F0] transition">{item.name}</Link>
                                     </li>
                                 ))}
                             </ul>
