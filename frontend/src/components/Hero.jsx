@@ -1,37 +1,66 @@
 import React from 'react';
-import customer1 from '../assets/customer (1).jpg';
-import customer2 from '../assets/customer (2).jpg';
-import customer3 from '../assets/customer (3).jpg';
+import heroRight from '../assets/hero-right.png';
 
 const Hero = () => {
   return (
-    <main className="flex-grow flex flex-col items-center justify-center text-center px-4 md:px-8 py-12 md:py-16 lg:py-20">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium max-w-5xl leading-tight drop-shadow-sm">
-        <span className="italic font-serif text-[#2D3E4E]">Restoring Balance</span> <span className="text-white font-light">with</span> <br />
-        <span className="font-sans font-semibold text-white">Evidence-Based Care</span>
-      </h1>
-      
-      <p className="mt-6 text-sm sm:text-base md:text-lg text-white/90 max-w-xl md:max-w-3xl drop-shadow-md leading-relaxed px-2">
-        Experience the transformative power of AI-driven empathy, providing insightful guidance and personalized strategies to support progress on your unique mental health journey.
-      </p>
+    <main className="lg:flex-grow flex items-start justify-center text-center px-4 md:px-8 pt-16 md:pt-20 lg:pt-6 pb-6 md:pb-8 lg:pb-5 relative overflow-hidden min-h-[85vh] md:min-h-[80vh] lg:min-h-0">
+      {/* Left Robot - Hidden on mobile, flipped version */}
+      <div className="hidden lg:block absolute left-0 bottom-0 pointer-events-none" style={{ width: '380px', height: 'auto' }}>
+        <img 
+          src={heroRight} 
+          alt="AI Assistant" 
+          className="w-full h-auto"
+          style={{ 
+            transform: 'scaleX(-1)',
+            filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.3))'
+          }}
+        />
+      </div>
 
-      <div className="mt-8 md:mt-10 flex flex-col items-center gap-6">
-        <button className="bg-[#2D3E4E] hover:bg-[#1a252f] text-white px-8 py-3 rounded-xl font-medium text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-          Get Early Access
-        </button>
+      {/* Center Content */}
+      <div className="flex flex-col items-center justify-between z-10 w-full max-w-5xl h-full">
+        <div className="flex-grow flex flex-col items-center justify-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-medium leading-tight md:leading-tight lg:leading-tight drop-shadow-lg mb-4 md:mb-6 lg:mb-0">
+            <span className="italic font-serif text-[#17615B]">Restoring Balance</span>{' '}
+            <span className="text-white font-light">with</span>
+            <br />
+            <span className="font-sans font-semibold text-white">Evidence-Based Care</span>
+          </h1>
+          
+          <p className="text-white/90 text-base sm:text-lg md:text-xl lg:hidden mt-4 md:mt-6 max-w-xl px-2 leading-relaxed">
+            Your personal AI companion for mental wellness, offering 24/7 support with compassionate, evidence-based guidance.
+          </p>
 
-        {/* Social Proof */}
-        <div className="flex items-center gap-3 bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full">
-          <div className="flex -space-x-3">
-            <img src={customer1} alt="Client" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
-            <img src={customer2} alt="Client" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
-            <img src={customer3} alt="Client" className="w-8 h-8 rounded-full border-2 border-white object-cover" />
-          </div>
-          <div className="text-left">
-            <p className="text-xs text-white font-medium">Already helped</p>
-            <p className="text-xs text-white font-bold">10,091 clients</p>
+          <div className="hidden lg:block mt-8">
+            <button 
+              className="text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg font-medium text-sm md:text-base transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              style={{ background: 'linear-gradient(180deg, #17615B 0%, #394846 100%)' }}
+            >
+              Get Early Access
+            </button>
           </div>
         </div>
+        
+        <div className="lg:hidden w-full mt-auto pt-6 md:pt-8">
+          <button 
+            className="text-white px-8 md:px-10 py-3 md:py-3.5 rounded-lg font-medium text-base md:text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 w-full max-w-xs mx-auto block"
+            style={{ background: 'linear-gradient(180deg, #17615B 0%, #394846 100%)' }}
+          >
+            Get Early Access
+          </button>
+        </div>
+      </div>
+
+      {/* Right Robot - Hidden on mobile */}
+      <div className="hidden lg:block absolute right-0 bottom-0 pointer-events-none" style={{ width: '380px', height: 'auto' }}>
+        <img 
+          src={heroRight} 
+          alt="AI Assistant" 
+          className="w-full h-auto"
+          style={{ 
+            filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.3))'
+          }}
+        />
       </div>
     </main>
   );

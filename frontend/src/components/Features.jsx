@@ -28,7 +28,7 @@ const features = [
 
 const Features = () => {
     return (
-        <section className="py-20 md:py-28 bg-white overflow-hidden">
+        <section className="py-20 md:py-28 bg-[#F5EFE7] overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 md:px-10">
 
                 {/* ------------ Heading Section with Updated Vector ------------ */}

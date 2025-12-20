@@ -28,11 +28,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="container mx-auto px-4 md:px-6 py-4 relative z-50">
+    <nav className="container mx-auto px-4 md:px-6 relative z-50">
       <div className="bg-white/20 backdrop-blur-md rounded-2xl px-4 md:px-6 py-3 flex justify-between items-center shadow-lg border border-white/30 relative">
         {/* Logo */}
         <div className="flex items-center">
-          <img src={logo} alt="Benzi Logo" className="h-8 md:h-10" />
+          <img src={logo} alt="Benzi Logo" className="h-7 md:h-9" />
         </div>
 
         {/* Desktop Nav Links */}
@@ -42,7 +42,7 @@ const Navbar = () => {
               key={link.name}
               href="#"
               className={`transition-colors ${
-                link.active ? 'text-[#1F3A4F] font-bold' : 'text-white hover:text-gray-200'
+                link.active ? 'text-[#17615B] font-bold' : 'text-[#2D3E4E] hover:text-[#17615B]'
               }`}
             >
               {link.name}
@@ -52,7 +52,10 @@ const Navbar = () => {
 
         {/* CTA Button & Mobile Menu Toggle */}
         <div className="flex items-center gap-4">
-          <button className="hidden md:block bg-[#2D3E4E] hover:bg-[#1a252f] text-white px-5 py-2 rounded-lg font-medium transition-colors text-sm lg:text-base shadow-md">
+          <button 
+            className="hidden md:block text-white px-5 py-2 rounded-lg font-medium transition-all text-sm lg:text-base shadow-md hover:shadow-lg"
+            style={{ background: 'linear-gradient(180deg, #17615B 0%, #394846 100%)' }}
+          >
             Free Trial
           </button>
           
