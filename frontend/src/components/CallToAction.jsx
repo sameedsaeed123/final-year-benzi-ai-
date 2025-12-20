@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const CallToAction = () => {
     return (
-        <section className="bg-[#F5EFE7] py-16 md:py-24">
+        <section className="bg-[#F5EFE7] py-16 md:py-24 relative z-0">
             <div className="max-w-6xl mx-auto px-4 md:px-8">
                 <div className="relative overflow-hidden rounded-[3.5rem] md:rounded-[4.5rem] bg-[#135F59] px-6 py-14 md:px-10 md:py-16 flex items-center justify-center min-h-[260px] md:min-h-[320px]">
                     {/* Concentric circle motif */}
@@ -23,7 +24,7 @@ const CallToAction = () => {
                         </div>
                     </div>
 
-                    <div className="relative z-10 text-center px-2 md:px-4 max-w-lg mx-auto">
+                    <div className="relative z-[1] text-center px-2 md:px-4 max-w-lg mx-auto">
                         <h2 className="text-[1.3rem] md:text-[2rem] font-semibold leading-tight text-[#145C56]">
                             <span className="block">Take The First</span>
                             <span className="block">Step To The</span>
@@ -33,12 +34,13 @@ const CallToAction = () => {
                             Begin your journey toward emotional well-being with accessible, supportive care.
                         </p>
                         <div className="mt-8">
-                            <button
+                            <Link
+                                to="/register"
                                 className="inline-flex items-center justify-center text-white font-semibold text-sm md:text-lg px-7 py-3 rounded-[1rem] shadow-[0_18px_40px_rgba(5,45,42,0.35)]"
                                 style={{ background: '#0B6B60' }}
                             >
                                 Contact Us
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

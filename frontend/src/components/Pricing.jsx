@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FiCheckCircle, FiArrowRight } from 'react-icons/fi';
 import vectorPrice from '../assets/vectorprice.png';
 
@@ -147,7 +148,8 @@ const Pricing = () => {
                                 </ul>
 
                                 <div className="mt-auto pt-10">
-                                    <button
+                                    <Link
+                                        to="/register"
                                         className={`w-full flex items-center justify-center gap-2 rounded-[2rem] font-semibold text-sm md:text-base py-3 transition-all ${
                                             index === 1
                                                 ? 'text-white'
@@ -160,7 +162,7 @@ const Pricing = () => {
                                         }
                                     >
                                         Get Started <FiArrowRight />
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

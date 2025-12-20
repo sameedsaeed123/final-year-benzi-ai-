@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
     FiMessageCircle,
     FiSmile,
@@ -82,10 +83,10 @@ const Services = () => {
                                 </div>
 
                                 <div className="bg-white px-5 md:px-6 py-3 md:py-4 flex justify-center">
-                                    <button className="bg-[#0F766E] hover:bg-[#0D6259] text-white px-6 py-2.5 rounded-lg font-semibold text-sm md:text-base transition-all shadow-[0_12px_25px_rgba(15,118,110,0.25)] flex items-center gap-2 w-full sm:w-auto justify-center">
+                                    <Link to="/register" className="bg-[#0F766E] hover:bg-[#0D6259] text-white px-6 py-2.5 rounded-lg font-semibold text-sm md:text-base transition-all shadow-[0_12px_25px_rgba(15,118,110,0.25)] flex items-center gap-2 w-full sm:w-auto justify-center">
                                         Learn More
                                         <FiArrowRight className="text-base" />
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

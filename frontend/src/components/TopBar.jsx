@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const TopBar = () => {
   return (
@@ -16,7 +17,7 @@ const TopBar = () => {
         </div>
       </div>
       <div className="hidden md:flex items-center gap-2 font-medium">
-        <span className="text-[#17615B]">Login/Signup</span>
+        <Link to="/register" className="text-[#17615B] hover:underline">Login/Signup</Link>
       </div>
       </div>
     </div>

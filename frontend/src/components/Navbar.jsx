@@ -71,12 +71,13 @@ const Navbar = ({ isSticky = false }) => {
 
             {/* CTA Button & Mobile Menu Toggle */}
             <div className="flex items-center gap-4">
-              <button 
+              <Link 
+                to="/register"
                 className="hidden md:block text-white px-5 py-2 rounded-lg font-medium transition-all text-sm lg:text-base shadow-md hover:shadow-lg"
                 style={{ background: 'linear-gradient(180deg, #17615B 0%, #394846 100%)' }}
               >
                 Free Trial
-              </button>
+              </Link>
               
               {/* Mobile Menu Button */}
               <button 
@@ -115,12 +116,13 @@ const Navbar = ({ isSticky = false }) => {
 
         {/* CTA Button & Mobile Menu Toggle */}
         <div className="flex items-center gap-4">
-          <button 
+          <Link 
+            to="/register"
             className="hidden md:block text-white px-5 py-2 rounded-lg font-medium transition-all text-sm lg:text-base shadow-md hover:shadow-lg"
             style={{ background: 'linear-gradient(180deg, #17615B 0%, #394846 100%)' }}
           >
             Free Trial
-          </button>
+          </Link>
           
           {/* Mobile Menu Button */}
           <button 
@@ -161,14 +163,14 @@ const Navbar = ({ isSticky = false }) => {
             </div>
             
             <div className="flex items-center gap-4 mt-6 pt-4 border-t border-white/20">
-              <Link to="/login" className="text-white/80 hover:text-white font-medium">Login</Link>
+              <Link to="/register" className="text-white/80 hover:text-white font-medium">Login</Link>
               <span className="text-white/40">|</span>
-              <Link to="/signup" className="text-white/80 hover:text-white font-medium">Signup</Link>
+              <Link to="/register" className="text-white/80 hover:text-white font-medium">Signup</Link>
             </div>
             
-            <button className="mt-4 bg-white text-[#2D3E4E] px-5 py-3 rounded-lg font-bold shadow-md hover:bg-gray-100 transition-colors w-full">
+            <Link to="/register" className="mt-4 bg-white text-[#2D3E4E] px-5 py-3 rounded-lg font-bold shadow-md hover:bg-gray-100 transition-colors w-full text-center block">
               Free Trial
-            </button>
+            </Link>
           </div>
         </div>
       </div>
